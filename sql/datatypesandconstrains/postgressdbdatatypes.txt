@@ -134,7 +134,7 @@ TSTZRANGE        . Stores a range of timestamps with
                  . time zone.
 
 DATERANGE        . Stores a range of dates.
-10. Geometric Datatypes
+10. Geometric Datatype
 plaintext
 Copy code
 Datatype         . Description
