@@ -1,0 +1,183 @@
+1. Numeric Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+SMALLINT         . 2-byte signed integer. Range:
+                 . -32,768 to 32,767.
+
+INTEGER          . 4-byte signed integer. Range:
+                 . -2,147,483,648 to 2,147,483,647.
+                 . Also known as `INT`.
+
+BIGINT           . 8-byte signed integer. Range:
+                 . -9,223,372,036,854,775,808 to
+                 . 9,223,372,036,854,775,807.
+
+SERIAL           . Auto-incrementing 4-byte integer.
+                 . Often used for primary keys.
+                 . Equivalent to `INTEGER` + `AUTO_INCREMENT`.
+
+BIGSERIAL        . Auto-incrementing 8-byte integer.
+                 . Used for large key sets. Equivalent
+                 . to `BIGINT` + `AUTO_INCREMENT`.
+
+DECIMAL(p,s)     . Arbitrary precision and scale numeric
+                 . type. `p`: precision (total digits),
+                 . `s`: scale (digits after decimal point).
+
+NUMERIC(p,s)     . Same as `DECIMAL`, often used
+                 . interchangeably. Precise number storage
+                 . without rounding errors.
+
+REAL             . 4-byte single-precision floating-point
+                 . number. Approximate range and precision.
+
+DOUBLE PRECISION . 8-byte double-precision floating-point
+                 . number. Higher precision than `REAL`.
+
+MONEY            . Stores currency values, with fixed
+                 . fractional precision.
+2. Character Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+CHAR(n)          . Fixed-length character string. Pads
+                 . shorter values with spaces. Maximum size:
+                 . `n` characters.
+
+VARCHAR(n)       . Variable-length character string. Stores
+                 . exactly as many characters as needed,
+                 . up to `n` characters.
+
+TEXT             . Variable-length character string with
+                 . unlimited size. Useful for long text fields.
+3. Binary Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+BYTEA            . Variable-length binary string. Used
+                 . for storing binary data like images,
+                 . audio, or encrypted values.
+4. Date and Time Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+TIMESTAMP        . Stores both date and time, without
+                 . time zone information.
+
+TIMESTAMPTZ      . Stores both date and time, with
+                 . time zone information. Automatically
+                 . adjusts for time zone changes.
+
+DATE             . Stores only the date (year, month,
+                 . and day), without time.
+
+TIME             . Stores only the time of day
+                 . (hour, minute, second), without date.
+
+TIMETZ           . Stores time of day with time zone
+                 . information.
+
+INTERVAL         . Represents a span of time. Useful
+                 . for storing durations (e.g., days, hours,
+                 . minutes, seconds).
+5. Boolean Datatype
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+BOOLEAN          . Stores TRUE, FALSE, or NULL. Used
+                 . for logical expressions and conditions.
+6. UUID Datatype
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+UUID             . Universally unique identifier. Stores
+                 . a 128-bit value used for generating
+                 . unique keys across systems.
+7. JSON Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+JSON             . Stores JSON (JavaScript Object
+                 . Notation) data as a plain text string.
+
+JSONB            . Stores JSON data in a binary format.
+                 . Supports indexing and efficient query
+                 . processing compared to `JSON`.
+8. Array Datatype
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+ARRAY            . Stores an array of any datatype.
+                 . Example: `INT[]` for an array of integers.
+9. Range Types
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+INT4RANGE        . Stores a range of integer values.
+
+NUMRANGE         . Stores a range of numeric values.
+
+TSRANGE          . Stores a range of timestamps without
+                 . time zone.
+
+TSTZRANGE        . Stores a range of timestamps with
+                 . time zone.
+
+DATERANGE        . Stores a range of dates.
+10. Geometric Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+POINT            . Stores a geometric point as an (x, y)
+                 . coordinate.
+
+LINE             . Stores an infinite line.
+
+LSEG             . Stores a line segment (two points).
+
+BOX              . Stores a rectangular box (two points).
+
+PATH             . Stores a path (a series of connected
+                 . points).
+
+POLYGON          . Stores a closed geometric shape
+                 . defined by three or more points.
+
+CIRCLE           . Stores a circle (center point and
+                 . radius).
+11. Network Address Types
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+CIDR             . Stores IP addresses and networks
+                 . in Classless Inter-Domain Routing (CIDR)
+                 . format.
+
+INET             . Stores an IP address (IPv4 or IPv6).
+
+MACADDR          . Stores a MAC address.
+
+
+
+--UPDATE Examples:
+--
+--Update by status: Modifies records based on a boolean field.
+--Update by numeric range: Adjusts values based on a comparison with numeric fields.
+--Update by date: Sets values based on a date condition.
+--DELETE Examples:
+--
+--Delete by exact match: Removes records matching a specific value.
+--Delete by range and condition: Deletes records that meet multiple conditions.
+--Delete by date: Removes records older than a specific date.
