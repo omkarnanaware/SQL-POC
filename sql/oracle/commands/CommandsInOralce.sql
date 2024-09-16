@@ -1,3 +1,13 @@
+--Author : - Omkar Nanaware
+--Email : omkarnanaware1998@gmail.com
+--file : CommandsInOracle.sql
+--Date/Time : 09/13/2024 1:48AM
+
+DESC employees;
+INFORMATION employees;
+INFO departments;
+INFO+ employees;
+
 
 DESC table_name;
 
@@ -183,6 +193,31 @@ ALTER SESSION SET NLS_LANGUAGE = 'FRENCH';
 
 -- To check the current NLS settings for the session:
 SELECT * FROM NLS_SESSION_PARAMETERS;
+
+--PARAMETER                      VALUE
+-------------------------------- ----------------------------------------------------------------
+--NLS_LANGUAGE                   AMERICAN
+--NLS_TERRITORY                  AMERICA
+--NLS_CURRENCY                   $
+--NLS_ISO_CURRENCY               AMERICA
+--NLS_NUMERIC_CHARACTERS         .,
+--NLS_CALENDAR                   GREGORIAN
+--NLS_DATE_FORMAT                DD-MON-RR
+--NLS_DATE_LANGUAGE              AMERICAN
+--NLS_SORT                       BINARY
+--NLS_TIME_FORMAT                HH.MI.SSXFF AM
+--NLS_TIMESTAMP_FORMAT           DD-MON-RR HH.MI.SSXFF AM
+--
+--PARAMETER                      VALUE
+-------------------------------- ----------------------------------------------------------------
+--NLS_TIME_TZ_FORMAT             HH.MI.SSXFF AM TZR
+--NLS_TIMESTAMP_TZ_FORMAT        DD-MON-RR HH.MI.SSXFF AM TZR
+--NLS_DUAL_CURRENCY              $
+--NLS_COMP                       BINARY
+--NLS_LENGTH_SEMANTICS           BYTE
+--NLS_NCHAR_CONV_EXCP            FALSE
+
+
 
 -- If you need to revert back to the database's default NLS settings, you can issue the following command:
 -- This resets all NLS parameters for the current session to their defaults.

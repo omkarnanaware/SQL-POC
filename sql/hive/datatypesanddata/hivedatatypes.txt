@@ -1,0 +1,98 @@
+1. Primitive Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+TINYINT          . 1-byte signed integer. Range:
+                 . -128 to 127.
+
+SMALLINT         . 2-byte signed integer. Range:
+                 . -32,768 to 32,767.
+
+INT              . 4-byte signed integer. Range:
+                 . -2,147,483,648 to 2,147,483,647.
+
+BIGINT           . 8-byte signed integer. Range:
+                 . -9,223,372,036,854,775,808 to
+                 . 9,223,372,036,854,775,807.
+
+FLOAT            . 4-byte single-precision floating-point
+                 . number.
+
+DOUBLE           . 8-byte double-precision floating-point
+                 . number. More precise than FLOAT.
+
+DECIMAL(p,s)     . Arbitrary precision and scale numeric
+                 . type. `p`: precision (total digits),
+                 . `s`: scale (digits after the decimal point).
+
+BOOLEAN          . Stores TRUE or FALSE values.
+                 . Useful for conditional logic.
+
+STRING           . Variable-length character sequence.
+                 . No predefined length. Useful for
+                 . text data.
+
+CHAR(n)          . Fixed-length character string.
+                 . Pads shorter strings with spaces.
+
+VARCHAR(n)       . Variable-length character string,
+                 . up to `n` characters.
+
+
+2. Complex Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+ARRAY<T>         . Collection of elements of type `T`.
+                 . Example: `ARRAY<INT>`, representing an
+                 . array of integers.
+
+MAP<K, V>        . Key-value pairs where the key (`K`)
+                 . and value (`V`) can be any datatype.
+                 . Example: `MAP<STRING, INT>`.
+
+STRUCT           . Groups a set of fields, each with a name
+                 . and a type. Similar to a row in SQL.
+                 . Example: `STRUCT<name:STRING, age:INT>`.
+
+UNIONTYPE        . Stores a value that can be of different
+                 . types, but only one type at a time.
+                 . Example: `UNIONTYPE<INT, STRING>`
+                 . allows values to be either `INT` or
+                 . `STRING`.
+
+
+3. Date and Time Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+TIMESTAMP        . Stores date and time information
+                 . with nanosecond precision. Useful for
+                 . capturing event times.
+
+DATE             . Stores only the date in `YYYY-MM-DD`
+                 . format. No time information is stored.
+
+INTERVAL         . Represents a span of time. For example,
+                 . time intervals between two events.
+
+
+4. Miscellaneous Datatypes
+plaintext
+Copy code
+Datatype         . Description
+----------------------------------------------------------
+BINARY           . Variable-length binary data type.
+                 . Useful for storing raw binary data,
+                 . such as image or audio files.
+
+DECIMAL          . Fixed-point numeric datatype with
+                 . user-defined precision and scale. Used
+                 . for financial or high-precision arithmetic.
+
+VOID             . Represents the absence of a value.
+                 . Typically used for intermediate results
+                 . or error handling.
